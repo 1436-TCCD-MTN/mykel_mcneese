@@ -1,0 +1,32 @@
+{
+  "name": "Rust",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "postCreateCommand": ".devcontainer/setup.sh",
+
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "tinkertrain.theme-panda",
+        "ms-vsliveshare.vsliveshare",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "rust-lang.rust-analyzer"
+      ]
+    },
+    "codespaces": {
+      "repositories": {
+        "1436-TCCD-MTN/*": {
+          "permissions": "write-all"
+        }
+      }
+    }
+  },
+
+  "features": {
+    "ghcr.io/devcontainers-extra/features/pre-commit:2": {}
+  }
+}
